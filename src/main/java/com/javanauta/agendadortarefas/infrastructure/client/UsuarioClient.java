@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
  public interface UsuarioClient {
 
-        @GetMapping // Não precisa de um RI, pois usa por padrão que seria o Usuario
+        @GetMapping ("/usuario")// Não precisa de um RI, pois usa por padrão que seria o Usuario
         UsuarioDTO buscaUsuarioPorEmail (@RequestParam("email") String email,
                 @RequestHeader("Authorization") String token);
 
